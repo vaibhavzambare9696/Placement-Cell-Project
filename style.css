@@ -1,0 +1,117 @@
+ body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            display:inline-flex;
+            justify-content:space-between;
+            padding: 20px;
+            background: rgb(34,193,195);
+            background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(181,6,71,1) 100%);
+        }
+        nav button{
+
+            background-color: white;
+            border:1px solid cyan;
+            padding:2px;
+            width:100px;
+            font-size:16px;
+            border-radius: 15px;
+            margin-left: 13px;
+
+        }
+        nav div{
+            display:flex;
+            margin-left: 40px;
+            padding:0;
+        }
+        .label a{
+            margin-top: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            color:black;
+            
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        button a{
+
+            text-decoration: none;
+        }
+        button a:hover {
+            background-color: black;
+            color:white;
+        }
+        button:hover {
+            background-color: black;
+            color:white;
+        }
+        nav img{
+            width: 20%;
+        }
+        button{
+            size: 10px;
+
+        }
+        .main{
+            width:100%;
+            height:auto;
+            display:flex;
+            padding-top:20px;
+            background: rgb(34,193,195);
+            background: linear-gradient(90deg, rgba(34,193,195,0.4) 0%, rgba(181,6,71,0.2) 80%);
+        }
+        .main1{
+            width:50%;
+        
+        }
+        .main1 h1{
+            font-family: Arial;
+            font-size: 48px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .main1 p{
+            font-family: Arial;
+            font-size: 20px;
+            margin-left: 20px;
+            color:grey;
+
+        }
+        .main span{
+            background-color: aqua;
+            color:#5522D0;
+
+        }
+        .main2{
+            border-radius: 30px;
+
+        }
+        .main2 img{
+
+            border-radius: 30px;
+            margin-left: 50px;
+            width:95%;
+            height: 110%
+        }
+
+
+/* login page css start*/
+
+
+
+
+
+        
+            
+        
