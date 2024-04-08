@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Increment login attempts if username or password is incorrect
             $_SESSION['login_attempts']++;
             $error_message = "Incorrect username or password. Please try again.";
+            $error_style = "color: red;"; // Define style for error message
         }
     }
 }
