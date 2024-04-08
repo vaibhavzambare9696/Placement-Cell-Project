@@ -39,7 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-<?php
 session_start();
 
 // Check if user is logged in
@@ -60,5 +59,3 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in'] || $_SESSION['user
     <p>Welcome, you have successfully logged in as Zambarevaibhav4!</p>
 </body>
 </html>
-
-?>
