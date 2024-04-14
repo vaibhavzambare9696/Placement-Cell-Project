@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="profile.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="logo">
+      <img src="logo.png" height="30">
+      <a href="index.html"><button class="home" type="home">Home</button></a>
+      <div class="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" width="30">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+        <a href="login.html"><button class="logout" type="logout">logout</button></a>
+      </div>
+    </div>
+  </nav>
+  <h2><b>User Profile</b></h2>
+  <div class="container">
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">
+        <a class="nav-link active" data-target="#basicDetails" onclick="showSection('basicDetails')">Basic Details</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-target="#summary" onclick="showSection('summary')">Summary</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-target="#careerJourney" onclick="showSection('careerJourney')">Career Journey</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-target="#award" onclick="showSection('award')">Award</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-target="#contact" onclick="showSection('contact')">Contact</a>
+      </li>
+    </ul>
+
+    <form id="profileForm">
+      <!-- BASIC DETAILS -->
+      <div id="basicDetails" class="profile-section active">
+        <h3>Basic Details</h3>
+        <label>Choose your picture</label><br>
+        <input type="file" name="profilePicture" accept="image/*"><br>
+        <label>First Name</label><br>
+        <input type="text" name="firstName" placeholder="First Name" required>
+        <label>Middle Name</label><br>
+        <input type="text" name="middleName" placeholder="Middle Name" required><br>
+        <label>Last Name</label><br>
+        <input type="text" name="lastName" placeholder="Last Name" required><br>
+        <label>Date of Birth</label><br>
+        <input type="date" name="dob" placeholder="Date of Birth" required><br>
+        <label>Gender: </label>
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female" required> Female
+        <input type="radio" name="gender" value="other" required> Other
+        <br>
+        <label>Marital Status: </label>
+        <select name="maritalStatus" required>
+          <option value="single">Single</option>
+          <option value="married">Married</option>
+          <option value="divorced">Divorced</option>
+          <option value="widowed">Widowed</option>
+        </select><br>
+        <label>PRN Number</label><br>
+        <input type="text" name="prnNumber" placeholder="Enter PRN Number" required><br>
+        <label>JoiningYear</label><br>
+        <input type="text" name="joiningYear" placeholder="Enter Joining Year" required><br>
+        <label>GraduationYear</label><br>
+        <input type="text" name="graduationYear" placeholder="Enter Graduation Year" required><br>
+        <label>Select organization</label><br>
+        <select id="institution" name="institution">
+        </select><br>
+        <label>Designation</label><br>
+        <input type="text" name="designation" placeholder="Enter YourDesignation" required><br>
+        <label>Email</label><br>
+        <input type="email" name="email" placeholder="Enter Your Email" required><br>
+        <label>Web Links: </label>
+        <br>
+        <select name="weblink">
+          <option>Type</option>
+          <option>Personal</option>
+          <option>Facebook</option>
+          <option>Twitter</option>
+          <option>GitHub</option>
+          <option>Behance</option>
+          <option>Other</option>
+        </select><br>
+        <label>Web Link</label><br>
+        <input type="text" name="link" placeholder="Enter your weblink">
+      </div>
+
+      <!-- SUMMARY -->
+      <div id="summary" class="profile-section">
+        <h3>Summary</h3><br>
+        <label>Profile Summary</label><br>
+        <textarea name="summary" placeholder="Enter summary (200-1000 characters)" rows="4"></textarea><br>
+        <label>RoleResponsibilities</label><br>
+        <textarea name="roleResponsibilities" placeholder="Enter role and responsibilities (max 6000 characters)" rows="8"></textarea><br>
+        <label>Area of Expertise: </label>
+        <br>
+        <input type="checkbox" name="expertise[]" value="html"> HTML
+        <input type="checkbox" name="expertise[]" value="css"> CSS
+        <input type="checkbox" name="expertise[]" value="javascript"> JavaScript
+        <!-- Add other expertise options here -->
+        <br>
+        <label>Area of Interest</label><br>
+        <input type="text" name="areaOfInterest" placeholder="Enter Your Area of Interest"><br>
+        <label>Core Values</label><br>
+        <input type="text" name="coreValues" placeholder="Enter Your Core Values"><br>
+        <label>Languages Known</label><br>
+        <select name="languagesKnown">
+          <option>languages Known</option>
+          <option>English</option>
+          <option>Marathi</option>
+          <option>Hindi</option>
+        </select>
+      </div>
+
+      <!-- CAREER JOURNEY -->
+      <div id="careerJourney" class="profile-section">
+        <h3>Career Journey</h3>
+      <label for="jobTitle">Job Title:</label>
+      <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter your job title">
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company" placeholder="Enter your company name">
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" name="startDate" placeholder="Enter your start date">
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" name="endDate" placeholder="Enter your end date">
+      <label for="responsibilities">Responsibilities:</label>
+      <textarea id="responsibilities" name="responsibilities" placeholder="Enter your responsibilities" rows="4"></textarea>
+      <h3>Education Journey</h3>
+      <label for="degree">Degree:</label>
+       <input type="text" id="degree" name="degree" placeholder="Enter your degree">
+       <label for="institution">Institution:</label>
+  <input type="text" id="institution" name="institution" placeholder="Enter your institution name">
+  <label for="startYear">Start Year:</label>
+  <input type="text" id="startYear" name="startYear" placeholder="Enter your start year">
+  <label for="endYear">End Year:</label>
+  <input type="text" id="endYear" name="endYear" placeholder="Enter your end year">
+      </div>
+
+      <!-- AWARD -->
+      <div id="award" class="profile-section">
+  <h3>Award</h3>
+  <label for="awardTitle">Award Title:</label>
+  <input type="text" id="awardTitle" name="awardTitle" placeholder="Enter the title of the award">
+  <label for="awardYear">Year:</label>
+  <input type="text" id="awardYear" name="awardYear" placeholder="Enter the year the award was received">
+</div>
+
+
+      <!-- CONTACT -->
+      <div id="contact" class="profile-section">
+  <h3>Contact</h3>
+  <label for="countryCode">Country Code:</label>
+  <select id="countryCode" name="countryCode">
+    <option value="+91">+91 India</option>
+    <option value="+93">+93 Afghanistan</option>
+    <option value="+355">+355 Albania</option>
+    <option value="+213">+213 Algeria</option>
+    <option value="+684">+684 American Samoa</option>
+    <option value="+376">+376 Andorra</option>
+    <option value="+244">+244 Antarctica</option>
+    <option value="+264">+264 Andorra</option>
+    <option value="+672">+672 Argentina</option>
+    <option value="+268">+268 Armenia</option>
+    <!-- Add other country codes here -->
+  </select>
+  <label for="phoneNumber">Phone Number:</label>
+  <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
+  <label for="currentAddress">Current Address:</label>
+  <input type="text" id="currentAddress" name="currentAddress" placeholder="Current Address">
+  <label for="country">Country:</label>
+  <input type="text" id="country" name="country" placeholder="Country">
+  <label for="state">State:</label>
+  <input type="text" id="state" name="state" placeholder="State">
+  <label for="city">City:</label>
+  <input type="text" id="city" name="city" placeholder="City">
+  <label for="postcode">Post Code:</label>
+  <input type="text" id="postcode" name="postcode" placeholder="Post Code">
+  <input type="checkbox" id="sameAsCurrent" onchange="copyAddress()"> <label for="sameAsCurrent">Same as Current Address</label>
+  <label for="permanentAddress">Permanent Address:</label>
+  <input type="text" id="permanentAddress" name="permanentAddress" placeholder="Permanent Address">
+</div>
+
+      <button type="button" class="btn-save" onclick="saveAndNext()">Save</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function showSection(sectionId) {
+      $('.profile-section').removeClass('active');
+      $('#' + sectionId).addClass('active');
+    }
+
+    function saveAndNext() {
+      // Save form data here
+
+      // Find the index of the active section
+      var activeIndex = $('.nav-link.active').parent().index();
+
+      // If not the last section, click on the next section's nav link
+      if (activeIndex < $('.nav-link').length - 1) {
+        $('.nav-link').eq(activeIndex + 1).trigger('click');
+      }
+
+      // Display success message
+      alert("Data saved successfully!");
+    }
+
+    function copyAddress() {
+      var sameAsCurrentCheckbox = document.getElementById("sameAsCurrent");
+      var currentAddressInput = document.getElementById("currentAddress");
+      var permanentAddressInput = document.getElementById("permanentAddress");
+      var countryInput = document.getElementById("country");
+      var stateInput = document.getElementById("state");
+      var cityInput = document.getElementById("city");
+      var postcodeInput = document.getElementById("postcode");
+
+      if (sameAsCurrentCheckbox.checked) {
+        // If checked, copy current address to permanent address
+        permanentAddressInput.value = currentAddressInput.value;
+        countryInput.value = countryInput.value;
+        stateInput.value = stateInput.value;
+        cityInput.value = cityInput.value;
+        postcodeInput.value = postcodeInput.value;
+      } else {
+        // If unchecked, clear permanent address
+        permanentAddressInput.value = "";
+      }
+    }
+
+    // List of institutes
+    var institutes = [
+      "MIT Arts, Commerce & Science College Alandi",
+      "G. H. Raisoni College of Engineering Wagholi",
+      "PROF. RAMKRISHNA MORE ARTS, COMMERCE & SCIENCE COLLEGE",
+      "Anantrao Pawar College Of Architecture",
+      "Indira College of Architecture & Design",
+      "Deccan Education Society Fergusson College",
+      "Alard College of Pharmacy",
+      "Zeal College of Engineering and Research",
+      "Sinhgad College of Arts, commerce And Science"
+      // Add more institutes here
+    ];
+
+    // Get the select element
+    var instituteSelect = document.getElementById("institution");
+
+    // Populate select element with institutes
+    for (var i = 0; i < institutes.length; i++) {
+      var option = document.createElement("option");
+      option.text = institutes[i];
+      option.value = institutes[i];
+      instituteSelect.add(option);
+    }
+  </script>
+</body>
+</html>
